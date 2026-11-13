@@ -81,31 +81,20 @@ _Hiervoor kies je een locatie op je harde schijf welke **buiten** je OneDrive of
 ## Installatie Laravel Herd
 
 - Start en doorloop de installer van [Laravel Herd](https://herd.laravel.com/).
-- [MAC] Geef permissie voor nginx en dnsmasq. En skip Herd Pro
-  ![mac-permissions.png](images/herd/permission.png)
-- Gebruik niet de default folder maar kies de eerder aangemaakte **Development** folder.
-  ![herd-folder.png](images/herd/herd-folder.png)
+- Vink 'Launch at login' aan.
+- [MAC] Geef permissie voor de Helper Service
+- Let op bij "enable Herd Studio", vink dit **uit**.
+- Herd Pro, kies voor 'Skip for now'.
 
-- Als laatste stap heb je de mogelijkheid om de installatie te voltooien.
-    - [WINDOWS] Vink de twee opties aan
-        - _Automatically launch Herd on system startup_
-        - _Launch Herd minimized as system tray application_
+Zoals aangegeven op het laatste scherm, zullen alle PHP-projecten standaard in de browser te zien zijn door de naam van de folder te schrijven met erachter <code>.test</code>. Standaard moet je daarvoor de projecten in de `~/Herd` folder zetten. Wij gebruiken hiervoor de Development folder.  
 
-          ![Complete setup Windows](images/herd/complete-setup-windows.png)
-    - [MAC] Vink de optie aan.
-        - _Launch Herd on system startup_
-
-          ![Complete setup Mac](images/herd/complete-setup-mac.png)
 - Bekijk de settings van Herd.
-    - [WINDOWS] Open Herd dashboard
-        - In je system system tray (rechtsonderin) zie je een icoon van Herd. Klik hierop.
+    - Open Herd dashboard
+        - In je system tray [WINDOWS] (rechtsonderin) zie je een icoon van Herd. Voor [MAC] is dat in de Menu Bar (rechtsboven) Klik hierop.
         - Hiermee open je het Herd dashboard.
-
-          ![dashboard-system-tray.png](images/herd/dashboard-system-tray.png)
-    - [MAC] Open Herd Menu
-        - Open het Herd menu via het icoon in de Menu Bar (rechtsboven).
-
-          ![herd menu bar mac](images/herd/herd-menu-bar-mac.png)
+        - Klik op **Settings**
+        - Onder General zie je **Herd Paths** staan. Voeg hieraan de Development folder toe die je zojuist hebt aangemaakt.
+        - Via de optie **Applications** (in settings) kun je je projecten openen
 
 ## Configuratie Herd
 
@@ -178,29 +167,35 @@ veiligheidsoverwegingen staat **directory listing** standaard uit.
 Als je in phpStorm werkt zitten er enorm veel toffe features, snelkoppelingen, etc waar we ook regelmatig bij stilstaan.
 Er zijn echter ook 3 settings die standaard niet ideaal ingesteld zijn, en we raden je aan deze aan te passen als volgt:
 
-1. **Zet de inline completion uit.**
+1. **Zet de inline completion uit.** (in settings)
 
    Daarmee voorkom je auto suggestions die, net als een AI agent, je op het huidige moment in je carrière eerder tegenwerken dan helpen. Het nu zelf leren en later in je carrière deze feature aanzetten is uiteraard een logische vervolgstap. Maar fouten krijgen na autocompletion zonder dat je nog goed weet wat het doet, werkt jezelf alleen maar tegen.
-- Ga naar *settings* (WINDOWS file > setting, MAC PhpStorm > settings) en zoek daar in de zoekbalk op *inline completions*. Zet deze uit.
-  ![settings-full-completion.png](images/phpstorm/settings-full-completion.png)
+    - Ga naar *settings* (WINDOWS file > setting, MAC PhpStorm > settings) en zoek daar in de zoekbalk op *inline completions*. 
+    - Zet **'Enable inline completions using language models'** uit.
+      ![settings-full-completion.png](images/phpstorm/settings-full-completion.png)
 
-2. **Zet commit tool aan.**
+2. **Zet commit tool aan.** (in settings)
 
    Daarmee krijg je, als je gaat committen, een popup waar je beter overzicht hebt over wat je gaat committen.
-   ![settings-enable-commit-tool-window.png](images/phpstorm/settings-enable-commit-tool-window.png)
+   
+    - Zoek in settings op: **commit tool**.
+    - Advanced settings --> enable commit tool.
+     ![settings-enable-commit-tool-window.png](images/phpstorm/settings-enable-commit-tool-window.png)
 
-3. **Zet ook het vinkje "clear initial message" aan**
+3. **Zet ook het vinkje "clear initial message" aan** (in settings)
 
    Hiermee wordt je altijd geforceerd om een nieuw bericht te typen voordat je commit.
    ![settings-clear-initial-commit.png](images/phpstorm/settings-clear-initial-commit.png)
+    - We zien nog regelmatig niet mooi geformatte code voorbij komen. Als je zoekende bent in code kan dit je tegenwerken.
+      Door het vinkje "reformat code" aan te zetten bij "actions on save" wordt je code bij het opslaan automatisch geformat en weer netjes uitgelijnd. Lang leve leesbaarheid
 
-- In de popup (**wanneer je gaat committen, dat is nu nog niet**) kun je ook gemakkelijk de vinkjes voor "analyze code" en "check todo" uitzetten waardoor je geen ellenlange warnings krijgt bij een commit.
+      ![settings-reformat-code.png](images/phpstorm/settings-reformat-code.png)
+   
+    - **Dit is een tip en kun je nu niet direct aanpassen!**
+    - Wanneer je een commit gaat doen in de popup kun je ook gemakkelijk de vinkjes voor "analyze code" en "check todo" uitzetten waardoor je geen ellenlange warnings krijgt bij een commit. 
 
-  ![settings-commit-options.png](images/phpstorm/settings-commit-options.png)
-- We zien nog regelmatig niet mooi geformatte code voorbij komen. Als je zoekende bent in code kan dit je tegenwerken.
-  Door het vinkje "reformat code" aan te zetten bij "actions on save" wordt je code bij het opslaan automatisch geformat en weer netjes uitgelijnd. Lang leve leesbaarheid
-
-  ![settings-reformat-code.png](images/phpstorm/settings-reformat-code.png)
+      ![settings-commit-options.png](images/phpstorm/settings-commit-options.png)
+    
 
 ### AI assistant
 
@@ -209,18 +204,13 @@ Wanneer je vragen wilt stellen aan AI doe je dat in de **'Ask mode'**. Wanneer j
 Als je een vraag wilt stellen, dan kun je dit het beste in Copilot doen. Daar heb je een keuze uit modellen en zit je niet vast aan het freemium model dat de Jetbrains AI assistant standaard biedt.
 
 **Jetbrains AI Assistant uitzetten.**
-- Ga naar de settings van PhpStorm, klik op **Plugins** en klik vervolgens op **Marketplace**
-- In de zoekbalk zoek je op **'Jetbrains assistant'**
-- Klik op het pijltje naast Disable en kies voor **uninstall**.
-
-  ![jetbrains-assistant.png](images/phpstorm/jetbrains-assistant.png)
-- In de rechtbovenhoek klik je met rechtermuis op het assistant icoon en kies je **Hide**.
-
-  ![assistant-icon.png](images/phpstorm/assistant-icon.png)
+- Ga naar de settings van PhpStorm, klik op **Plugins** 
+- In de zoekbalk zoek je op **Air**
+- Zet de schakelaar uit.
 
 **Github Copilot aanzetten.**
-- Ga naar de settings van PhpStorm, klik op **Plugins** en klik vervolgens op **Marketplace**
-- In de zoekbalk zoek je op **'Github Copilot'**
+- Ga naar de settings van PhpStorm, klik op **Plugins** 
+- In de zoekbalk zoek je op **Github Copilot**
 - Klik op Enable
 - Je zal hierna PhpStorm moeten herstarten.
 
@@ -252,10 +242,11 @@ bestand `phpinfo.php` te staan. Dit bestand geeft informatie over de PHP-instell
   phpinfo();
   ```
 Dit bestand ga je nu in de browser bezoeken.
-- Klik met de rechtermuisknop op **Herd** in de system tray en kies voor _Open Sites_.
-- Waarschijnlijk moet je eerst op verversen klikken om de site te zien. Klik hiervoor op het icoontje met de twee pijltjes.
-- Je ziet nu de site `serverinfo.test` staan. Klik hierop.
-- De details van de site worden getoond. In de gegevens zie je URL staan, met de link naar de site.
+- Klik met de rechtermuisknop op **Herd** in de system tray en kies voor _Applications_.
+- Waarschijnlijk moet je eerst op verversen klikken om de site te zien. Klik hiervoor op het icoontje met het pijltje.
+- Je ziet nu de site `serverinfo.test` staan. Klik hierop. De details van de site worden getoond (rechts).
+- ⚠️ Zorg ervoor dat je sites altijd HTTPS zijn. Vink dit aan in de opties.
+- In de gegevens zie je URL staan, met de link naar de site.
   [http://serverinfo.test](http://serverinfo.test). Klik hierop.
 - Je ziet nu de volgende pagina. Klik op de link naar het bestand `phpinfo.php`.
     <div style="background-color: white; font-family: 'Times New Roman',serif; color: black;">
@@ -271,17 +262,6 @@ Dit bestand ga je nu in de browser bezoeken.
 ⚠️ Wanneer je het bestand (`phpinfo.php`) gebruikt op een live-server om informatie over de server te krijgen, is het
 verstandig om het bestand, na het inzien van de informatie, direct te verwijderen. Het geeft namelijk veel informatie
 over de server en kan een veiligheidsrisico vormen.
-
-### Site tonen zonder geschikte driver
-
-Om alle zelfgemaakte site kunnen zien in het overzicht van **Sites** in Herd, moet je de volgende
-optie aanzetten.
-
-- In het dashboard van Herd ga je naar **Sites**
-- Klik op settings (het tandwiel icoon). Of drie puntjes op Windows.
-  ![site settings](images/herd/site-settings.png)
-- Selecteer de optie **Show sites without valid driver**
-  ![enable sites without valid driver](images/herd/sites-without-valid-driver.png)
 
 ## DBngin
 
@@ -399,8 +379,7 @@ met de eindopdracht. Je kunt dit ook doen voor de werkmap.
 ## [OPTIONEEL] GitHub Student Developer Pack
 
 Als onderdeel van de GitHub Student Pack heb je toegang tot allerlei gratis diensten, waaronder een gratis
-account op GitHub Pro. Hiermee kun je onbeperkt private repositories aanmaken. $200 aan gratis tegoed op
-Digital Ocean voor cloud hosting, een jaar lang gratis domeinnaam registratie op Namecheap en nog veel meer.
+account op GitHub Pro. Hiermee kun je onbeperkt private repositories aanmaken, toegang tot cursussen een jaar lang gratis domeinnaam registratie op Namecheap en nog veel meer.
 
 - Om toegang te krijgen tot deze diensten, ga je naar [https://education.GitHub.com/pack](https://education.GitHub.com/pack)
 - Klik op _Get student benefits_
@@ -411,14 +390,3 @@ Digital Ocean voor cloud hosting, een jaar lang gratis domeinnaam registratie op
 
 Via the student pack kan je bij namecheap een domeinnaam (.me) registreren.
 - https://www.namecheap.com/support/knowledgebase/article.aspx/9687/35/how-to-register-a-domain-via-our-educational-promotion-at-ncme/?hcs_request_id=e0f2bffb47e4
-
-### Cloud Hosting
-
-Nadat je je hebt aangemeld voor het Student Developer Pack, kun je een gratis account aanmaken op Digital Ocean.
-
-- Ga naar [https://www.digitalocean.com/github-students](https://www.digitalocean.com/github-students)
-- Klik op _Git Started_
-- Log in met je GitHub account (gebruik de knop _Sign up with GitHub_)
-- _Authenticate with GitHub_ en geef Digital Ocean toegang om je e-mailadres uit te lezen.
-- Je hebt nu je eigen cloud hosting account.
-- Deze kun je bezoeken via [https://cloud.digitalocean.com](https://cloud.digitalocean.com)
