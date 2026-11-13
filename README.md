@@ -1,13 +1,13 @@
 # Programmeren 2 onderdeel van CMTTHE03-2
 
 Hier vind je alle informatie, lesopdrachten, oefeningen, startcode en uitwerkingen voor programmeren 2.
-Binnen deze cursus leer je CRUD functionaliteit bouwen in een website met behulp van [PHP](https://www.php.net/).
+Binnen deze cursus leer je CRUD-functionaliteit bouwen in een website met behulp van [PHP](https://www.php.net/).
 
-Om te kunnen starten met deze les is het belangrijk om de bijbehorende software en instellingen te volgen uit de [Installatiehandleiding](./Installatie).
+Om te kunnen starten met deze cursus is het belangrijk om de bijbehorende software en instellingen te volgen uit de [Installatiehandleiding](./Installatie).
 
-Onderwerpen die aan bod zullen komen zijn
+Onderwerpen die aan bod zullen komen:
 
-| Week | Les            | Onderwerpen                                                                                     | Technieken                                                     | Producten                | Deadline                        | 
+| Week | Les            | Onderwerpen                                                                                     | Technieken                                                     | Producten                | Deadline                        |
 |------|----------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------|---------------------------------|
 | 1    | [Les1](./les1) | Webserver, interpreter, request and response.<br> Basic syntax in PHP                           | Syntax PHP<br>Array<br>Datum en tijd                           | (zonder db)<br>Index.php |                                 |
 |      | [Les2](./les2) | Links<br>Wat is een database?<br>Aanmaken van een database<br>Ophalen van data uit een database | Database<br>GET<br>SQL SELECT                                  | Index.php<br>Details.php |                                 |
@@ -15,11 +15,11 @@ Onderwerpen die aan bod zullen komen zijn
 |      | [Les4](./les4) | ERD’s<br>Verwijderen van informatie                                                             | Databaserelaties<br>SQL DELETE                                 | Delete.php               |                                 |
 | 3    | [Les5](./les5) | Update actie en terugschrijven van data in formuliervelden<br>Hidden field                      | Update<br>Hidden field                                         | Edit.php                 |                                 |
 |      | [Les6](./les6) | Authenticatie, login<br>1-to-many relatie Foreign key<br>Security                               | Session, Cookie<br>htmlentities(), mysqli_real_escape_string() | Login.php<br>Logout.php  | Zelfevaluatie beoordelingsmodel |
-| 4    | [Les7](./les7) | Veel-op-veelrelaties                                                                            | SQL JOINS, LIKE, DELETE                                        | Delete.php               |                                 |
+| 4    | [Les7](./les7) | Veel-op-veelrelaties                                                                            | SQL JOINS, LIKE                                        |                |                                 |
 |      | Les8           | Ondersteuning uitwerking                                                                        |                                                                |                          |                                 |
 | 5    |                |                                                                                                 |                                                                |                          | Mondeling assessment            |
 
-Is bovenstaande je al bekend? Volg dan de [Advanced cursus](advanced).
+Is bovenstaande stof je al bekend? Volg dan de [Advanced cursus](advanced).
 
 ## Lesmaterialen
 
