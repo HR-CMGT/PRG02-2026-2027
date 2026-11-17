@@ -119,15 +119,16 @@ Bekijk daarom de instellingen van Herd:
 Om ervoor te zorgen dat de URL's in de browser altijd eindigen met een `/` moet je de volgende stappen doorlopen in Herd:
 
 1. Klik met de rechtermuisknop op het Herd-icoon in de system tray (Windows) of menu bar (Mac).
-2. Kies voor **Configuration files**.
-3. Dit opent `.config/herd`.
+2. Druk ALT in op het toetsenboard
+3. Kies voor **Configuration files**.
+4. Dit opent `.config/herd`.
     - **Mac**: dit opent de map `php`; ga nu één map omhoog.
-4. Ga naar `config/nginx` en open `herd.conf` in een teksteditor.
-5. Voeg boven het onderdeel `location` de volgende regel toe:
+5. Ga naar `config/nginx` en open `herd.conf` in een teksteditor.
+6. Voeg boven het onderdeel `location` de volgende regel toe:
    ```apacheconf
    rewrite ^([^.]*[^/])$ $1/ permanent;
    ```
-6. Nu ziet je configuratie er als volgt uit:
+7. Nu ziet je configuratie er als volgt uit:
    ```apacheconf
    server {
        listen 127.0.0.1:80 default_server;
@@ -144,9 +145,9 @@ Om ervoor te zorgen dat de URL's in de browser altijd eindigen met een `/` moet 
            try_files $2 $2/;
        }
    ```
-7. Sla het bestand op en sluit het.
-8. Klik opnieuw met de rechtermuisknop op het Herd-icoon in de system tray (Windows) of menu bar (Mac) en kies voor
-   **Stop all services** en vervolgens **Start all services**.
+8. Sla het bestand op en sluit het.
+9. Klik opnieuw met de rechtermuisknop op het Herd-icoon in de system tray (Windows) of menu bar (Mac) en kies voor
+   **Restart**.
 
 #### Directory listing aanzetten
 
